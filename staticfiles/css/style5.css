@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+}
+h1{
+    /* color: rgb(255, 104, 3); */
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    font-size: 100px;
+}
+.head{    
+    position: relative;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    /* top: 10px; */
+    z-index: -1;
+}
+form{
+    margin: 10px 450px;
+}
+input {
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  box-sizing: border-box;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
+label{
+    color: white;
+}
+/* input[type=email] {
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  box-sizing: border-box;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+} */
+textarea {
+  width: 300px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  display: block;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+}
+button{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    margin-top: 10px;
+    border-radius: 15px;
+    height: 50px;
+    width: 150px;
+}
+button:hover{
+     box-shadow:
+    0 0 5px rgba(255, 102, 0, 0.753),
+    0 0 10px rgba(255, 102, 0, 0.753),
+    0 0 20px white,
+    0 0 40px white;
+}
+input:hover{
+     box-shadow:
+    0 0 5px rgba(255, 102, 0, 0.753),
+    0 0 10px rgba(255, 102, 0, 0.753),
+    0 0 20px rgba(255, 102, 0, 0.753),
+    0 0 40px rgba(255, 102, 0, 0.753);
+}
+textarea:hover{
+     box-shadow:
+    0 0 5px rgba(255, 102, 0, 0.753),
+    0 0 10px rgba(255, 102, 0, 0.753),
+    0 0 20px rgba(255, 102, 0, 0.753),
+    0 0 40px rgba(255, 102, 0, 0.753);
+}
+.er{
+    background-color: rgb(255, 255, 255);
+    color: red;
+    text-align: center;
+}

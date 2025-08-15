@@ -1,0 +1,46 @@
+.report{
+    /* background-color: red; */
+    padding: 50px;
+    /* background-color: coral; */
+}
+body{
+    background-color: coral;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border: 2px solid black;
+    font-size: large;
+    background-color: white;
+    /* border-radius: 20px; */
+}
+th{
+    background-color: rgb(66, 60, 60);
+    color: white;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    border: 2px solid black;
+}
+h1{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    border: 2px solid black;
+    margin-left: 20px;
+    font-size: large;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: black;
+}
+a:hover{
+    background-color: rgb(219, 213, 213);
+}
+.nav{
+    position: relative;
+    /* background-color: red; */
+    width: 350px;
+    left: 900px;
+}

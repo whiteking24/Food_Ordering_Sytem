@@ -1,0 +1,82 @@
+#login-form{
+    background-color: rgb(255, 250, 249);
+    height: 400px;
+    width: 450px;
+    margin: 100px 450px;
+    box-shadow: 5px 5px 15px rgb(87, 79, 79);
+}
+.login{
+    /* background-color: aliceblue; */
+    width: 150px;
+    display: inline-block;
+    padding-left: 40px;
+}
+.top{
+    /* background-color: azure; */
+    position: relative;
+}
+.icon{
+    display: inline-block;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    left: 380px;
+    top: 15px;
+    
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+#body{
+    width: 400px;
+    height: 250px;
+    margin-top: 15px;
+    margin-left: 25px;
+    /* position: relative; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: top; */
+}
+.outer-div1{
+    height: 80px;
+    width:350px ;
+    /* background-color: bisque; */
+    margin-left: 25px;
+}
+
+input{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 340px;
+    height: 60px;
+    border-radius: 5px;
+    border-color: rgb(156, 151, 151);
+}
+.btn{
+    margin-top: 20px;
+}
+button{
+    height: 50px;
+    width: 340px;
+    margin-left: 25px;
+    border-radius: 10px;
+    background-color: rgba(255, 102, 0, 0.753);
+}
+button:hover{
+    background-color:rgb(255, 104, 3); 
+}
+.last{
+    padding-left: 45px;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 104, 3);
+}
+.btn a{
+    color: black;
+}
+.err{
+    background-color: antiquewhite;
+    color: red;
+    text-align: center;
+}
