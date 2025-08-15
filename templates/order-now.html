@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static '/css/style2.css' %}">
+</head>
+<body>
+    <div class="error"> 
+            {% if messages %}
+            {% for message in messages %}
+            <h2>{{message}} !!</h2>                
+            {% endfor %}  
+            {% endif %}
+        </div>  
+    <div id="signup-form">
+        <div class="top">
+            <div class="signup">
+                <h1>
+                    Place Your Order
+                </h1>
+            </div>
+            <div class="icon">
+                <a href="{% url 'order' %}"><img src="{% static '/image/close.png' %}" alt="close"></a>
+            </div>
+        </div>
+        <div id="body">
+            <form action="{% url 'ordernow' product.id %}" method="post">
+                 {% csrf_token %} 
+                <div class="outer-div1">
+                <label for="fullname"></label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+            </div>
+
+            <div class="outer-div2">
+                <label for="fooditem"></label>
+                <input type="text" id="fooditem" name="fooditem" value="{{product.title}}" readonly>
+            </div>
+
+            <div class="outer-div2">
+                <label for="quantity"></label>
+                <input type="number" id="quantity" name="quantity" placeholder="Quantity">
+            </div>
+
+            <div class="outer-div2">
+                <label for="price"></label>
+                <input type="number" id="price" name="price" value="{{product.price}}"readonly>
+            </div>
+
+            <div class="outer-div2">
+                <label for="address"></label>
+                <input type="text" id="address" name="address" placeholder="Address">
+            </div>
+
+
+            <div class="btn">
+                <button type="submit"><b>Place Order</b></button>
+            </div>
+            </form>
+        </div>
+        
+        {% comment %} <div class="last">
+            <h3>Already have an account?<a href="{% url 'login' %}" >Login</a></h3>
+        </div> {% endcomment %}
+    </div>
+</body>
+</html>

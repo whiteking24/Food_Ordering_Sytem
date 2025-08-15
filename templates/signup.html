@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static '/css/style2.css' %}">
+</head>
+<body>
+    <div class="error"> 
+            {% if messages %}
+            {% for message in messages %}
+            <h2>{{message}} !!</h2>                
+            {% endfor %}  
+            {% endif %}
+        </div>  
+    <div id="signup-form">
+        <div class="top">
+            <div class="signup">
+                <h1>
+                    Signup
+                </h1>
+            </div>
+            <div class="icon">
+                <a href="{% url 'homepage' %}"><img src="{% static '/image/close.png' %}" alt="close"></a>
+            </div>
+        </div>
+        <div id="body">
+            <form action="{% url 'signup' %}" method="post">
+                 {% csrf_token %} 
+                <div class="outer-div1">
+                <label for="fullname"></label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+            </div>
+
+            <div class="outer-div2">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="outer-div2">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+
+            <div class="outer-div2">
+                <label for="confirmpassword"></label>
+                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="ConfirmPassword">
+            </div>
+
+
+            <div class="btn">
+                <button type="submit"><b>Create Account</b></button>
+            </div>
+            </form>
+        </div>
+        
+        <div class="last">
+            <h3>Already have an account?<a href="{% url 'login' %}" >Login</a></h3>
+        </div>
+    </div>
+</body>
+</html>

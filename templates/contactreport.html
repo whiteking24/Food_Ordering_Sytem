@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style9.css' %}">
+</head>
+<body>
+    <div class="report">
+         <div class="nav">
+            <nav>
+                <a href="{% url 'report' %}">Report</a>
+                <a href="{% url 'oreport' %}">Order</a>
+                <a href="{% url 'homepage' %}">Home</a>
+            </nav>
+        </div>
+        <div>
+            <h1>Report</h1>
+        </div>
+        <table >
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Queries</th>
+            </tr>
+            
+            {% for datas in ques %}
+            <tr>
+                <td>{{datas.name}}</td>
+                <td>{{datas.email}}</td>
+                <td>{{datas.queries}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

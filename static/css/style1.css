@@ -1,0 +1,87 @@
+.heading h1{
+    color: rgba(255, 102, 0, 0.753);
+    font-size: 40px;
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
+}
+#whole{
+    background-color: coral;
+    height: 672px;
+}
+.heading{
+    display: inline-block;
+    width: 350px;
+    /* background-color: aliceblue; */
+    padding-left:30px ;
+}
+.heading h1{
+    font-family: "Montserrat", sans-serif;  
+}
+.form{
+    display: inline-block;
+    margin-left: 400px;
+    padding: 10px;
+    width: 350px;
+    /* background-color: aquamarine; */
+}
+a{
+    padding-left: 20px;
+    color: rgba(255, 102, 0, 0.753);
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+    right: 8px;
+}
+#home{
+    height: 550px;
+    background-color: white;
+    position: relative;
+    border-radius: 90px;
+    border: 3px solid black;
+    width: 1200px;
+    left: 70px;
+    top: 35px;
+    
+}
+.center{
+    position: relative;
+}
+img{
+    position: absolute;
+    left: 750px;
+}
+.text{
+    /* background-color: rgb(140, 155, 155); */
+    width: 550px;
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    font-family: sans-serif;
+}
+.text h1{
+    padding-left: 150px;
+    color:black;
+    font-size: 40px;
+}
+.text h3{
+    color:black;
+    padding-left: 80px;
+    font-size: 40px;
+}
+.text p{
+    padding-left: 0px;
+    font-size: 25px;
+    color: rgb(255, 104, 3);
+}
+span{
+    padding-left: 170px;
+    color: rgb(255, 104, 3);
+    /* z-index: -1; */
+}
+footer p{
+    text-align: center;
+    /* background-color: red; */
+    font-family: sans-serif;
+    margin-top: 80px;
+    font-weight: bold;
+}

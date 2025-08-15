@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static '/css/style5.css' %}">
+    <style>
+        @font-face {
+            font-family: iniya;
+            src: url("{% static '/fonts/HillsideCalligraphy_PERSONAL_USE_ONLY.otf' %}");
+        }
+
+        .text h1{
+            color: white;
+            font-family: iniya;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <div class="head">
+            <img src="{% static '/image/food.webp' %}" alt="food">
+            <div class="text">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+         <div class="er">
+                    {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{message}}!!</h2>
+                    {% endfor %}    
+                    {% endif %}
+                </div>
+
+        <div class="fields">
+            <div class="input-field">
+                <form action="{% url 'contact' %}" method="post">
+                    {% csrf_token %}
+                    <label for="cname">Name</label>
+                    <input type="text" placeholder="name" class="box" id="cname" name="cname">
+                    <label for="cemail">Email</label>
+                    <input type="email" placeholder="email" class="box" id="cemail" name="cemail">
+                    <label for="queries">Queries</label>
+                    <textarea class="box" placeholder="message" id="queries" name="queries" cols="30" rows="10"></textarea>
+                    <button type="submit">Send message</button>
+                </form>
+                <div class="er">
+                    {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{message}}</h2>
+                    {% endfor %}    
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

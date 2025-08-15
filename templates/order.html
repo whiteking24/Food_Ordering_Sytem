@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    {% comment %} <link rel="stylesheet" href="{% static '/css/style4.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}?v={{ timestamp }}">
+
+</head>
+<body>
+    <div id="home">
+    <div id="whole">
+        <div class="anime">
+            <img src="{% static 'image/burger.png' %}" alt="food" class="burger1">
+        </div>
+        <div class="intro">
+            <h1>Better food for more people</h1>
+            <h2>For over a decade, we've enabled our customers to discover new tastes, delivered right to their doorstep</h2>
+        </div>
+        <div class="anime">
+            <img src="{% static '/image/burger.png' %}" alt="food" class="burger2">
+        </div>
+    </div>
+    <hr>
+    <div class="search">
+        <nav>
+            <a href="{% url 'order' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'homepage' %}">LogOut</a>
+
+        </nav>
+    </div>
+    <div id="to-hold-food">
+        
+        {% for item in food %}
+         <a href="{% url 'one_product' item.id %}" >   
+        <div class="outer-div"> 
+            <div class="image">
+                <img src="{{item.image.url}}" alt="food-item">
+            </div>
+            <hr>
+            <div class="desc">
+                <h1>{{item.title}}</h1>
+                <h3>{{item.descript}}</h3>
+                <h4>rs.{{item.price}}</h4>
+            </div>
+        </div>
+    </a>
+          {% endfor %}
+
+    </div>
+    </div>
+</body>
+</html>

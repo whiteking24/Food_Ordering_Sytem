@@ -1,0 +1,79 @@
+#container{
+    /* background-color: rgba(255, 102, 0, 0.822); */
+    height: 675px;
+    position: relative;
+    background-color: coral;
+}
+.inner-div{
+    background-color: white;
+    height: 550px;
+    width: 1200px;
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    border-radius: 30px;
+    border: 3px solid black;
+}
+.nav{
+    /* background-color: aqua; */
+    width: 500px;
+    margin-left: 600px;
+    margin-top: 25px;
+}
+a{
+    text-decoration: none;
+    padding-left: 50px;
+    color: black;
+}
+a:hover{
+    color: chocolate;
+}
+.content{
+    height: 550px;
+    /* background-color: aqua; */
+    position: relative;
+}
+.desc{
+    height: 480px;
+    width: 550px;
+    /* background-color: blanchedalmond; */
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    display: inline-block;
+}
+.about-image{
+    height: 480px;
+    width: 550px;
+    display: inline-block;
+    /* background-color: rgb(206, 133, 23); */
+    position: absolute;
+    top: 20px;
+    left: 620px;
+}
+h1{
+    padding-top: 0px;
+    padding-left: 80px;   
+    font-size: 60px;
+}
+h3{
+   padding-top: 30px;
+   padding-left: 80px;
+   line-height: 40px;
+   font-family: sans-serif;
+}
+button{
+    border-radius: 20px;
+    height: 50px;
+    width: 130px;
+    margin-left: 100px;
+    margin-top: 20px;
+    background-color: chocolate;
+}
+video{
+    width: 450px;    
+    margin-top: 90px;
+    border:2px solid black;
+    border-radius: 500px;
+    box-shadow: black 10px 10px 25px;
+}

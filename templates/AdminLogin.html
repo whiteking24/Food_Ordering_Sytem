@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static '/css/style3.css' %}">
+</head>
+<body>
+    <div class="err">
+        
+        {% if messages %}
+        
+        {% for message in messages %}
+            <h2>{{message}}</h2>
+        {% endfor %}
+                        
+        {% endif %}
+            
+    </div>
+    <div id="login-form">
+        <div class="top">
+            <div class="login">
+                <h1>
+                    Admin Login
+                </h1>
+            </div>
+            <div class="icon">
+                <a href="{% url 'homepage' %}"><img src="{% static '/image/close.png' %}" alt="close"></a>
+            </div>
+        </div>
+        <div id="body">
+            <form method="post" action="{% url 'alogin' %}">
+                {% csrf_token %}
+                <div class="outer-div1">
+                
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username">
+                
+            </div>
+
+            <div class="outer-div1">
+                
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="btn">
+                <button type="submit">Login</button>
+            </div>
+            </form>
+        </div>
+        {% comment %} <div class="last">
+            <h3>New to Food Delievery App?<a href="{% url 'signup' %}">Create account</a></h3>
+        </div> {% endcomment %}
+    </div>
+</body>
+</html> 

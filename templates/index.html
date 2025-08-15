@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>foodever</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+  <link rel="stylesheet" href="{% static '/css/style1.css'%}" >
+   {% comment %} <style>
+        @font-face {
+            font-family: font;
+            src: url("{% static '/fonts/HillsideCalligraphy_PERSONAL_USE_ONLY.otf' %}");
+        }
+        .heading h1{
+            color: rgba(255, 102, 0, 0.753);
+            font-family: font;
+        }
+        
+    </style> {% endcomment %}
+</head>
+<body>
+  <div id="whole"> 
+  <div id="home">
+    <div class="header">
+      <div class="heading">
+        <h1>foodever</h1>
+      </div>
+      <div class="form">
+        <a href="{% url 'signup' %}">Signup</a>
+        <a href="{% url 'login' %}" >Login</a>
+        <a href="{% url 'alogin' %}" >Admin Login</a>
+      </div>
+    </div>
+
+    <div class="center">
+          {% comment %} <img src="{% static '/image/index-food2.jpg' %}" alt="background" class="bg-img"> {% endcomment %}
+      <div class="text">
+        <h1>India's #1</h1>
+        <h3>Food Delivery App</h3>
+        <p><b>Experience fast & easy online ordering</b><br>
+          <span><b>on the app</b></span></p>
+      </div>
+      <div>
+        <img src="{% static '/image/index.png' %}" alt="food image">
+      </div>
+    </div>
+     </div>
+    <footer>
+     <p >© 2025 foodever. All Rights Reserved</p>
+    </footer>
+ 
+</div>
+</body>
+</html>

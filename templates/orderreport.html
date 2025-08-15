@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style9.css' %}">
+</head>
+<body>
+    <div class="report">
+         <div class="nav">
+            <nav>
+                <a href="{% url 'report' %}">Report</a>
+                <a href="{% url 'creports' %}">Contact</a>
+                <a href="{% url 'homepage' %}">Home</a>
+            </nav>
+        </div>
+        <div>
+            <h1>Report</h1>
+        </div>
+        <table >
+            <tr>
+                <th>Name</th>
+                <th>Food Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Address</th>
+            </tr>
+            
+            {% for datas in ord %}
+            <tr>
+                <td>{{datas.fullname}}</td>
+                <td>{{datas.fooditem}}</td>
+                <td>{{datas.quantity}}</td>
+                <td>{{datas.price}}</td>
+                <td>{{datas.address}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

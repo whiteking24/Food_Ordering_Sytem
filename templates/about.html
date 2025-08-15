@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static '/css/style7.css' %}">
+    <style>
+        @font-face {
+            font-family: iniya;
+            src: url("{% static '/fonts/HillsideCalligraphy_PERSONAL_USE_ONLY.otf' %}");
+        }
+
+        h1{
+            color: rgba(255, 102, 0, 0.753);
+            font-family: iniya;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="inner-div">
+            <div class="nav">
+                <a href="#container.html" style="text-decoration-line:underline; color:chocolate">About Us</a>
+                <a href="{% url 'order' %}">Our Food</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+            <div class="content">
+                <div class="desc">
+                    <h1>
+                        Have no time to prepare food?
+                    </h1>
+                    <h3>
+                        Hungry? We’re already on the way.<br>
+                        Delicious food, lightning-fast delivery, and zero drama!
+                    </h3>
+                    <a href="{% url 'order' %}">
+                    <button>Order Now</button>
+                    </a>
+                </div>
+                <div class="about-image">
+                    <!-- <div class="top"></div>
+                    <div class="bottom"></div> -->
+                    <video autoplay muted loop>
+                        <source src="{% static '/video/about-video.mp4' %}" type="video/mp4">
+                    </video>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
