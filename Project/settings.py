@@ -28,6 +28,9 @@ DEBUG = True
 # ALLOWED_HOSTS = ['food-ordering-system.up.railway.app','localhost']
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://food-ordering-system.up.railway.app',
+]
 # Application definition
 
 INSTALLED_APPS = [
