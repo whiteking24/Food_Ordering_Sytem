@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$0@%oz04$)9(#eo0egf*qc)l&68afecr+hy7!5t1!7erorsk64
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['food-ordering-sytem.onrender.com','localhost']
+ALLOWED_HOSTS = ['food-ordering-system.up.railway.app','localhost']
 
 
 # Application definition
