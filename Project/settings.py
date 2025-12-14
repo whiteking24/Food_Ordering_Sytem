@@ -26,9 +26,13 @@ SECRET_KEY = 'django-insecure-$0@%oz04$)9(#eo0egf*qc)l&68afecr+hy7!5t1!7erorsk64
 DEBUG = True
 
 # ALLOWED_HOSTS = ['food-ordering-system.up.railway.app','localhost']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'Iniya.pythonanywhere.com',
+    'localhost',
+    '127.0.0.1'
+    ]
 
-CSRF_TRUSTED_ORIGINS = ['https://food-ordering-system.up.railway.app',
+CSRF_TRUSTED_ORIGINS = ['https://Iniya.pythonanywhere.com',
 ]
 # Application definition
 
@@ -118,7 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
@@ -130,4 +134,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
-MEDIA_DIR = os.path.join(BASE_DIR ,'meida')
+MEDIA_ROOT = os.path.join(BASE_DIR ,'media')
