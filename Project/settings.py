@@ -27,12 +27,12 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['food-ordering-system.up.railway.app','localhost']
 ALLOWED_HOSTS = [
-    'Iniya.pythonanywhere.com',
+    'iniya.pythonanywhere.com',
     'localhost',
     '127.0.0.1'
     ]
 
-CSRF_TRUSTED_ORIGINS = ['https://Iniya.pythonanywhere.com',
+CSRF_TRUSTED_ORIGINS = ['https://iniya.pythonanywhere.com',
 ]
 # Application definition
 
